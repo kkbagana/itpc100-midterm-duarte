@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile Card - CSS Cascade Demo</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+      
+        article {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.08),
+                0 4px 12px rgba(0, 0, 0, 0.05);
+            margin: 0 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        article::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+        }
+        
+        article p {
+            font-size: 1.1rem;
+            line-height: 1.75;
+            color: #374151;
+            text-align: center;
+            margin: 0;
+            position: relative;
+            z-index: 2;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1d4ed8 0%, #7c3aed 100%);
+            color: white;
+            padding: 2.5rem 2rem 2rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+        
+        header p {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        main {
+            padding: 1rem 0;
+        }
+        
+        footer {
+            background: #f8fafc;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        footer p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+        
+        .contact-btn {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border: none;
+            padding: 0.875rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+            letter-spacing: 0.5px;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.4);
+        }
+        
+        @media (max-width: 480px) {
+            body { padding: 1rem; }
+            article { margin: 0 0.5rem; padding: 2rem 1.5rem; }
+            header h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+  
+    <div class="company-card">
+        <header>
+            <h1 style="color: #fef3c7; text-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+                TechDuarte Solutions
+            </h1>
+            <p style="background: rgba(255,255,255,0.25); padding: 12px 24px; border-radius: 30px; backdrop-filter: blur(10px); box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                Innovating Tomorrow, Today
+            </p>
+        </header>
+        
+        <main>
+            <article>
+                <p>
+                    At TechDuarte Solutions, we craft cutting-edge digital experiences that 
+                    empower businesses to thrive in the modern world. Our team of passionate 
+                    innovators combines creativity with technical expertise to deliver 
+                    transformative solutions that drive real results.
+                </p>
+            </article>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 TechDuarte Solutions. All rights reserved. | Built with ❤️</p>
+            <button class="contact-btn" 
+                    style="font-size: 1.1rem; transform: scale(1.02);"
+                    onclick="alert('📧 Contact form opening... Thank you for your interest! 🚀')">
+                Get In Touch
+            </button>
+        </footer>
+    </div>
+</body>
+</html>
